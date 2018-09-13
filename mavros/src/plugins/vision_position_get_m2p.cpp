@@ -7,16 +7,16 @@
 
 #include <mavros/mavros_plugin.h>
 
-#include <mavros_msgs/VISION_POSION_GET_M2P.h>
+#include <mavros_msgs/VISION_POSITION_GET_M2P.h>
 
 namespace mavros {
 namespace std_plugins {
 /**
  * @brief FixedTargetPositionM2P plugin.
  */
-class VISION_POSION_GET_M2PPlugin : public plugin::PluginBase {
+class VISION_POSITION_GET_M2PPlugin : public plugin::PluginBase {
 public:
-	VISION_POSION_GET_M2PPlugin() : PluginBase(),
+	VISION_POSITION_GET_M2PPlugin() : PluginBase(),
         nh("~")
     { }
 
@@ -46,9 +46,9 @@ private:
 //    ros::Publisher mavros_msg_pub;
 	ros::Subscriber mavros_msg_sub;
 
-	 void vision_position_get_m2p_cb(const mavros_msgs::VISION_POSION_GET_M2P::ConstPtr &req)
+	 void vision_position_get_m2p_cb(const mavros_msgs::VISION_POSITION_GET_M2P::ConstPtr &req)
 	 {
-	 	mavlink::pixhawk::msg::VISION_POSION_GET_M2P test_msg{};
+	 	mavlink::pixhawk::msg::VISION_POSITION_GET_M2P test_msg{};
 
 	 	test_msg.timestamp = ros::Time::now().toNSec() / 1000;
 
@@ -65,4 +65,4 @@ private:
 }   // namespace mavros
 
 #include <pluginlib/class_list_macros.h>
-PLUGINLIB_EXPORT_CLASS(mavros::std_plugins::VISION_POSION_GET_M2PPlugin, mavros::plugin::PluginBase)
+PLUGINLIB_EXPORT_CLASS(mavros::std_plugins::VISION_POSITION_GET_M2PPlugin, mavros::plugin::PluginBase)

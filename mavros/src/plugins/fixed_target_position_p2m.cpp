@@ -1,8 +1,8 @@
 /**
  * @brief 	: FixedTargetPositionP2M plugin
  * @file 	: fixed_target_position_p2m.cpp
- * @author 	: libn
- * @time 	: 2016/09/12
+ * @author 	: liuxu
+ * @time 	: 2018/09/13
  */
 
 #include <mavros/mavros_plugin.h>
@@ -56,17 +56,13 @@ private:
 		ros_msg->home_y        = fixed_target_position_p2m.home_y;
 		ros_msg->home_z        = fixed_target_position_p2m.home_z;
 
-		ros_msg->observe_x     = fixed_target_position_p2m.observe_x;
-		ros_msg->observe_y     = fixed_target_position_p2m.observe_y;
-		ros_msg->observe_z     = fixed_target_position_p2m.observe_z;
+		ros_msg->component_x     = fixed_target_position_p2m.component_x;
+		ros_msg->component_y     = fixed_target_position_p2m.component_y;
+		ros_msg->component_z     = fixed_target_position_p2m.component_z;
 
-		ros_msg->spray_left_x  = fixed_target_position_p2m.spray_left_x;
-		ros_msg->spray_left_y  = fixed_target_position_p2m.spray_left_y;
-		ros_msg->spray_left_z  = fixed_target_position_p2m.spray_left_z;
-
-		ros_msg->spray_right_x = fixed_target_position_p2m.spray_right_x;
-		ros_msg->spray_right_y = fixed_target_position_p2m.spray_right_y;
-		ros_msg->spray_right_z = fixed_target_position_p2m.spray_right_z;
+		ros_msg->construction_x  = fixed_target_position_p2m.construction_x;
+		ros_msg->construction_y  = fixed_target_position_p2m.construction_y;
+		ros_msg->construction_z  = fixed_target_position_p2m.construction_z;
 
         mavros_msg_pub.publish(ros_msg);
     }
