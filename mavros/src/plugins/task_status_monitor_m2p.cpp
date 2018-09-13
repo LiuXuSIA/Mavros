@@ -64,9 +64,8 @@ private:
 	void task_status_monitor_m2p_cb(const mavros_msgs::TASK_STATUS_MONITOR_M2P::ConstPtr &req) {
 		mavlink::pixhawk::msg::TASK_STATUS_MONITOR_M2P test_msg{};
 
-//		test_msg.timestamp = ros::Time::now().toNSec() / 1000;
+		test_msg.timestamp = ros::Time::now().toNSec() / 1000;
 
-		test_msg.spray_duration 	= req->spray_duration;
 		test_msg.task_status 	= req->task_status;
 		test_msg.loop_value 	= req->loop_value;
 		test_msg.target_x 	= req->target_x;

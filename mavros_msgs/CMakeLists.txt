@@ -52,6 +52,8 @@ add_message_files(
   VISION_NUM_SCAN_M2P.msg
   VISION_ONE_NUM_GET_M2P.msg
   YAW_SP_CALCULATED_M2P.msg
+  GRAB_STATUS_M2P.msg
+  VISION_POSITION_GET_M2P.msg
 )
 
 add_service_files(

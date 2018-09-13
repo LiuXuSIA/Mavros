@@ -7,16 +7,16 @@
 
 #include <mavros/mavros_plugin.h>
 
-#include <mavros_msgs/YAW_SP_CALCULATED_M2P.h>
+#include <mavros_msgs/GRAB_STATUS_M2P.h>
 
 namespace mavros {
 namespace std_plugins {
 /**
  * @brief YawSpCalculated plugin.
  */
-class YAW_SP_CALCULATED_M2PPlugin : public plugin::PluginBase {
+class GRAB_STATUS_M2PPlugin : public plugin::PluginBase {
 public:
-	YAW_SP_CALCULATED_M2PPlugin() : PluginBase(),
+	GRAB_STATUS_M2PPlugin() : PluginBase(),
         nh("~")
     { }
 
@@ -29,7 +29,7 @@ public:
 
         nh.param<std::string>("frame_id", frame_id, "map");
         //mavros_msg_pub = nh.advertise<mavros_msgs::YawSpCalculated>("yaw_sp_calculated", 10);
-		mavros_msg_sub = nh.subscribe("yaw_sp_calculated_m2p", 10, &YAW_SP_CALCULATED_M2PPlugin::yaw_sp_calculated_m2p_cb, this);
+		mavros_msg_sub = nh.subscribe("grab_status_m2p", 10, &GRAB_STATUS_M2PPlugin::grab_status_m2p_cb, this);
     }
 
     Subscriptions get_subscriptions()
@@ -55,11 +55,11 @@ private:
 
     //     mavros_msg_pub.publish(ros_msg);
     // }
-	void yaw_sp_calculated_m2p_cb(const mavros_msgs::YAW_SP_CALCULATED_M2P::ConstPtr &req) {
-		mavlink::pixhawk::msg::YAW_SP_CALCULATED_M2P test_msg{};
+	void grab_status_m2p_cb(const mavros_msgs::GRAB_STATUS_M2P::ConstPtr &req) {
+		mavlink::pixhawk::msg::GRAB_STATUS_M2P test_msg{};
 
 		test_msg.timestamp = ros::Time::now().toNSec() / 1000;
-		test_msg.yaw_sp = req->yaw_sp;
+		test_msg.grab_status = req->grab_status;
 
 		UAS_FCU(m_uas)->send_message_ignore_drop(test_msg);
 	}
@@ -68,4 +68,4 @@ private:
 }   // namespace mavros
 
 #include <pluginlib/class_list_macros.h>
-PLUGINLIB_EXPORT_CLASS(mavros::std_plugins::YAW_SP_CALCULATED_M2PPlugin, mavros::plugin::PluginBase)
+PLUGINLIB_EXPORT_CLASS(mavros::std_plugins::GRAB_STATUS_M2PPlugin, mavros::plugin::PluginBase)
