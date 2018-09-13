@@ -143,7 +143,8 @@ add_library(mavros_plugins
   src/plugins/vision_num_scan_m2p.cpp
   src/plugins/vision_one_num_get_m2p.cpp
   src/plugins/yaw_sp_calculated_m2p.cpp
-
+  src/plugins/vision_position_get_m2p.cpp
+  src/plugins/grab_status_m2p.cpp
 )
 add_dependencies(mavros_plugins
   mavros

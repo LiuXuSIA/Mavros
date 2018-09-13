@@ -50,23 +50,19 @@ private:
 	 {
 	 	mavlink::pixhawk::msg::FIXED_TARGET_RETURN_M2P test_msg{};
 
-//	 	test_msg.timestamp = ros::Time::now().toNSec() / 1000;
+	 	test_msg.timestamp = ros::Time::now().toNSec() / 1000;
 
 	 	test_msg.home_x        	= req->home_x;
 	 	test_msg.home_y        	= req->home_y;
 	 	test_msg.home_z        	= req->home_z;
 
-	 	test_msg.observe_x        = req->observe_x;
-	 	test_msg.observe_y        = req->observe_y;
-	 	test_msg.observe_z        = req->observe_z;
+	 	test_msg.component_x        = req->component_x;
+	 	test_msg.component_y        = req->component_y;
+	 	test_msg.component_z        = req->component_z;
 
-	 	test_msg.spray_left_x     = req->spray_left_x;
-	 	test_msg.spray_left_y     = req->spray_left_y;
-	 	test_msg.spray_left_z     = req->spray_left_z;
-
-	 	test_msg.spray_right_x    = req->spray_right_x;
-	 	test_msg.spray_right_y    = req->spray_right_y;
-	 	test_msg.spray_right_z    = req->spray_right_z;
+	 	test_msg.construction_x     = req->construction_x;
+	 	test_msg.construction_y     = req->construction_y;
+	 	test_msg.construction_z     = req->construction_y;
 
 	 	UAS_FCU(m_uas)->send_message_ignore_drop(test_msg);
 	 }
