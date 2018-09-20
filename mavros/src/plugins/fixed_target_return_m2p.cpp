@@ -62,7 +62,7 @@ private:
 
 	 	test_msg.construction_x     = req->construction_x;
 	 	test_msg.construction_y     = req->construction_y;
-	 	test_msg.construction_z     = req->construction_y;
+	 	test_msg.construction_z     = req->construction_z;
 
 	 	UAS_FCU(m_uas)->send_message_ignore_drop(test_msg);
 	 }
