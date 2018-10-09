@@ -71,6 +71,7 @@ private:
 		test_msg.target_x 	= req->target_x;
 		test_msg.target_y 	= req->target_y;
 		test_msg.target_z 	= req->target_z;
+        test_msg.sensor_distence   = req->sensor_distance;
 
 		UAS_FCU(m_uas)->send_message_ignore_drop(test_msg);
 	}

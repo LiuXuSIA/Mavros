@@ -55,8 +55,8 @@ private:
 	 	test_msg.loop_value     = req->loop_value;
 	 	
 	 	test_msg.component_position_x     = req->component_position_x;
-	 	test_msg.component_position_x     = req->component_position_x;
-	 	test_msg.component_position_x     = req->component_position_x;
+	 	test_msg.component_position_y     = req->component_position_y;
+	 	test_msg.component_position_z     = req->component_position_z;
 
 	 	UAS_FCU(m_uas)->send_message_ignore_drop(test_msg);
 	 }

@@ -58,7 +58,7 @@ private:
 	void grab_status_m2p_cb(const mavros_msgs::GRAB_STATUS_M2P::ConstPtr &req) {
 		mavlink::pixhawk::msg::GRAB_STATUS_M2P test_msg{};
 
-		test_msg.timestamp = ros::Time::now().toNSec() / 1000;
+	    //test_msg.timestamp = ros::Time::now().toNSec() / 1000;
 		test_msg.grab_status = req->grab_status;
 
 		UAS_FCU(m_uas)->send_message_ignore_drop(test_msg);
