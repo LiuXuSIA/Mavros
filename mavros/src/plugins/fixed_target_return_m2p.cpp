@@ -64,6 +64,10 @@ private:
 	 	test_msg.construction_y     = req->construction_y;
 	 	test_msg.construction_z     = req->construction_z;
 
+	 	test_msg.home_yaw_sp     = req->home_yaw_sp;
+	 	test_msg.component_yaw_sp     = req->component_yaw_sp;
+	 	test_msg.construction_yaw_sp     = req->construction_yaw_sp;
+
 	 	UAS_FCU(m_uas)->send_message_ignore_drop(test_msg);
 	 }
 };

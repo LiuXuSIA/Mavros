@@ -64,6 +64,10 @@ private:
 		ros_msg->construction_y  = fixed_target_position_p2m.construction_y;
 		ros_msg->construction_z  = fixed_target_position_p2m.construction_z;
 
+        ros_msg->home_yaw_sp  = fixed_target_position_p2m.home_yaw_sp;
+        ros_msg->component_yaw_sp  = fixed_target_position_p2m.component_yaw_sp;
+        ros_msg->construction_yaw_sp  = fixed_target_position_p2m.construction_yaw_sp;
+
         mavros_msg_pub.publish(ros_msg);
     }
 //	 void fixed_target_position_cb(const mavros_msgs::FIXED_TARGET_POSITION_P2M::ConstPtr &req)
