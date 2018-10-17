@@ -60,6 +60,10 @@ private:
 		ros_msg->component_y     = fixed_target_position_p2m.component_y;
 		ros_msg->component_z     = fixed_target_position_p2m.component_z;
 
+        ros_msg->construction_x     = fixed_target_position_p2m.construction_x;
+        ros_msg->construction_y     = fixed_target_position_p2m.construction_y;
+        ros_msg->construction_z     = fixed_target_position_p2m.construction_z;
+
 		ros_msg->box1_x  = fixed_target_position_p2m.box1_x;
 		ros_msg->box1_y  = fixed_target_position_p2m.box1_y;
 		ros_msg->box1_z  = fixed_target_position_p2m.box1_z;
