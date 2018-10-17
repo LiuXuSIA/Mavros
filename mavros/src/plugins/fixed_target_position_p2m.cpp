@@ -60,9 +60,25 @@ private:
 		ros_msg->component_y     = fixed_target_position_p2m.component_y;
 		ros_msg->component_z     = fixed_target_position_p2m.component_z;
 
-		ros_msg->construction_x  = fixed_target_position_p2m.construction_x;
-		ros_msg->construction_y  = fixed_target_position_p2m.construction_y;
-		ros_msg->construction_z  = fixed_target_position_p2m.construction_z;
+		ros_msg->box1_x  = fixed_target_position_p2m.box1_x;
+		ros_msg->box1_y  = fixed_target_position_p2m.box1_y;
+		ros_msg->box1_z  = fixed_target_position_p2m.box1_z;
+
+        ros_msg->box2_x  = fixed_target_position_p2m.box2_x;
+        ros_msg->box2_y  = fixed_target_position_p2m.box2_y;
+        ros_msg->box2_z  = fixed_target_position_p2m.box2_z;
+
+        ros_msg->box3_x  = fixed_target_position_p2m.box3_x;
+        ros_msg->box3_y  = fixed_target_position_p2m.box3_y;
+        ros_msg->box3_z  = fixed_target_position_p2m.box3_z;
+
+        ros_msg->box4_x  = fixed_target_position_p2m.box4_x;
+        ros_msg->box4_y  = fixed_target_position_p2m.box4_y;
+        ros_msg->box4_z  = fixed_target_position_p2m.box4_z;
+
+        ros_msg->box5_x  = fixed_target_position_p2m.box5_x;
+        ros_msg->box5_y  = fixed_target_position_p2m.box5_y;
+        ros_msg->box5_z  = fixed_target_position_p2m.box5_z;
 
         ros_msg->home_yaw_sp  = fixed_target_position_p2m.home_yaw_sp;
         ros_msg->component_yaw_sp  = fixed_target_position_p2m.component_yaw_sp;

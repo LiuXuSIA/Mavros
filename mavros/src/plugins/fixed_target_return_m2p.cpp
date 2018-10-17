@@ -64,6 +64,27 @@ private:
 	 	test_msg.construction_y     = req->construction_y;
 	 	test_msg.construction_z     = req->construction_z;
 
+	 	test_msg.box1_x     = req->box1_x;
+	 	test_msg.box1_y     = req->box1_y;
+	 	test_msg.box1_z     = req->box1_z;
+
+        test_msg.box2_x     = req->box2_x;
+	 	test_msg.box2_y     = req->box2_y;
+	 	test_msg.box2_z     = req->box2_z;
+
+        test_msg.box3_x     = req->box3_x;
+	 	test_msg.box3_y     = req->box3_y;
+	 	test_msg.box3_z     = req->box3_z;
+
+        test_msg.box4_x     = req->box4_x;
+	 	test_msg.box4_y     = req->box4_y;
+	 	test_msg.box4_z     = req->box4_z;
+
+        test_msg.box5_x     = req->box5_x;
+	 	test_msg.box5_y     = req->box5_y;
+	 	test_msg.box5_z     = req->box5_z;
+
+
 	 	test_msg.home_yaw_sp     = req->home_yaw_sp;
 	 	test_msg.component_yaw_sp     = req->component_yaw_sp;
 	 	test_msg.construction_yaw_sp     = req->construction_yaw_sp;
