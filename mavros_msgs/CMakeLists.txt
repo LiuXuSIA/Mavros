@@ -54,6 +54,7 @@ add_message_files(
   YAW_SP_CALCULATED_M2P.msg
   GRAB_STATUS_M2P.msg
   VISION_POSITION_GET_M2P.msg
+  GPS_Status.msg
 )
 
 add_service_files(
